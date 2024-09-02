@@ -1554,9 +1554,9 @@ importers:
       '@utrecht/column-layout-css':
         specifier: workspace:*
         version: link:../../components/column-layout
-      '@utrecht/combobox-css':
+      '@utrecht/combobox-react':
         specifier: workspace:*
-        version: link:../../components/combobox
+        version: link:packages/combobox-react
       '@utrecht/currency-data-css':
         specifier: workspace:*
         version: link:../../components/currency-data
@@ -1587,21 +1587,21 @@ importers:
       '@utrecht/focus-ring-css':
         specifier: workspace:*
         version: link:../../components/focus-ring
-      '@utrecht/form-field-css':
-        specifier: workspace:*
-        version: link:../../components/form-field
       '@utrecht/form-field-description-css':
         specifier: workspace:*
         version: link:../../components/form-field-description
       '@utrecht/form-field-error-message-css':
         specifier: workspace:*
         version: link:../../components/form-field-error-message
+      '@utrecht/form-field-react':
+        specifier: workspace:*
+        version: link:packages/form-field-react
       '@utrecht/form-fieldset-css':
         specifier: workspace:*
         version: link:../../components/form-fieldset
-      '@utrecht/form-label-css':
+      '@utrecht/form-label-react':
         specifier: workspace:*
-        version: link:../../components/form-label
+        version: link:packages/form-label-react
       '@utrecht/form-toggle-css':
         specifier: workspace:*
         version: link:../../components/form-toggle
@@ -1659,6 +1659,9 @@ importers:
       '@utrecht/listbox-css':
         specifier: workspace:*
         version: link:../../components/listbox
+      '@utrecht/listbox-react':
+        specifier: workspace:*
+        version: link:packages/listbox-react
       '@utrecht/logo-button-css':
         specifier: workspace:*
         version: link:../../components/logo-button
@@ -1755,9 +1758,9 @@ importers:
       '@utrecht/textarea-css':
         specifier: workspace:*
         version: link:../../components/textarea
-      '@utrecht/textbox-css':
+      '@utrecht/textbox-react':
         specifier: workspace:*
-        version: link:../../components/textbox
+        version: link:packages/textbox-react
       '@utrecht/top-task-link-css':
         specifier: workspace:*
         version: link:../../components/toptask-link
@@ -1883,6 +1886,134 @@ importers:
       date-fns:
         specifier: 2.30.0
         version: 2.30.0
+      jest:
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.14.8)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100)(@types/node@20.14.8)(typescript@4.9.5))
+      rollup:
+        specifier: 4.18.0
+        version: 4.18.0
+
+  packages/component-library-react/packages/combobox-react:
+    dependencies:
+      '@babel/runtime':
+        specifier: ^7.23.6
+        version: 7.24.7
+      downshift:
+        specifier: 9.0.8
+        version: 9.0.8(react@18.3.1)
+      react:
+        specifier: '18'
+        version: 18.3.1
+      react-dom:
+        specifier: '18'
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@utrecht/button-react':
+        specifier: workspace:*
+        version: link:../button-react
+      '@utrecht/combobox-css':
+        specifier: workspace:*
+        version: link:../../../../components/combobox
+      '@utrecht/form-field-react':
+        specifier: workspace:*
+        version: link:../form-field-react
+      '@utrecht/form-label-react':
+        specifier: workspace:*
+        version: link:../form-label-react
+      '@utrecht/listbox-react':
+        specifier: workspace:*
+        version: link:../listbox-react
+      '@utrecht/textbox-react':
+        specifier: workspace:*
+        version: link:../textbox-react
+      jest:
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.14.8)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100)(@types/node@20.14.8)(typescript@4.9.5))
+      rollup:
+        specifier: 4.18.0
+        version: 4.18.0
+
+  packages/component-library-react/packages/form-field-react:
+    dependencies:
+      '@babel/runtime':
+        specifier: ^7.23.6
+        version: 7.24.7
+      react:
+        specifier: '18'
+        version: 18.3.1
+      react-dom:
+        specifier: '18'
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@utrecht/form-field-css':
+        specifier: workspace:*
+        version: link:../../../../components/form-field
+      jest:
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.14.8)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100)(@types/node@20.14.8)(typescript@4.9.5))
+      rollup:
+        specifier: 4.18.0
+        version: 4.18.0
+
+  packages/component-library-react/packages/form-label-react:
+    dependencies:
+      '@babel/runtime':
+        specifier: ^7.23.6
+        version: 7.24.7
+      react:
+        specifier: '18'
+        version: 18.3.1
+      react-dom:
+        specifier: '18'
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@utrecht/form-label-css':
+        specifier: workspace:*
+        version: link:../../../../components/form-label
+      jest:
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.14.8)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100)(@types/node@20.14.8)(typescript@4.9.5))
+      rollup:
+        specifier: 4.18.0
+        version: 4.18.0
+
+  packages/component-library-react/packages/listbox-react:
+    dependencies:
+      '@babel/runtime':
+        specifier: ^7.23.6
+        version: 7.24.7
+      react:
+        specifier: '18'
+        version: 18.3.1
+      react-dom:
+        specifier: '18'
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@utrecht/listbox-css':
+        specifier: workspace:*
+        version: link:../../../../components/listbox
+      jest:
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.14.8)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100)(@types/node@20.14.8)(typescript@4.9.5))
+      rollup:
+        specifier: 4.18.0
+        version: 4.18.0
+
+  packages/component-library-react/packages/textbox-react:
+    dependencies:
+      '@babel/runtime':
+        specifier: ^7.23.6
+        version: 7.24.7
+      react:
+        specifier: '18'
+        version: 18.3.1
+      react-dom:
+        specifier: '18'
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@utrecht/textbox-css':
+        specifier: workspace:*
+        version: link:../../../../components/textbox
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@20.14.8)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100)(@types/node@20.14.8)(typescript@4.9.5))
@@ -3506,6 +3637,9 @@ importers:
       '@utrecht/color-sample-css':
         specifier: workspace:*
         version: link:../../components/color-sample
+      '@utrecht/combobox-css':
+        specifier: workspace:*
+        version: link:../../components/combobox
       '@utrecht/component-library-react':
         specifier: workspace:*
         version: link:../component-library-react
@@ -3608,6 +3742,9 @@ importers:
       '@utrecht/list-social-css':
         specifier: workspace:*
         version: link:../../components/list-social
+      '@utrecht/listbox-css':
+        specifier: workspace:*
+        version: link:../../components/listbox
       '@utrecht/logo-css':
         specifier: workspace:*
         version: link:../../components/logo
@@ -11986,6 +12123,9 @@ packages:
     resolution: {integrity: sha512-jaSIDzP9pZVS4ZfQ+TzvtiWhdpFhE2RDHz8QJkpX9SIpLq88VueF5jJw6t+6CUQcAoA6t+x89MLrWAqpfDE8iQ==}
     engines: {node: '>= 0.8.0'}
 
+  compute-scroll-into-view@3.1.0:
+    resolution: {integrity: sha512-rj8l8pD4bJ1nx+dAkMhV1xB5RuZEyVysfxJqB1pRchh1KVvwOv9b7CGB8ZfjTImVv2oF+sYMUkMZq6Na5Ftmbg==}
+
   computeds@0.0.1:
     resolution: {integrity: sha512-7CEBgcMjVmitjYo5q8JTJVra6X5mQ20uTThdK+0kR7UEaDrAWEQcRiBtWJzga4eRpP6afNwwLsX2SET2JhVB1Q==}
 
@@ -12852,6 +12992,11 @@ packages:
 
   downloadjs@1.4.7:
     resolution: {integrity: sha512-LN1gO7+u9xjU5oEScGFKvXhYf7Y/empUIIEAGBs1LzUq/rg5duiDrkuH5A2lQGd5jfMOb9X9usDa2oVXwJ0U/Q==}
+
+  downshift@9.0.8:
+    resolution: {integrity: sha512-59BWD7+hSUQIM1DeNPLirNNnZIO9qMdIK5GQ/Uo8q34gT4B78RBlb9dhzgnh0HfQTJj4T/JKYD8KoLAlMWnTsA==}
+    peerDependencies:
+      react: '>=16.12.0'
 
   dragula@3.7.3:
     resolution: {integrity: sha512-/rRg4zRhcpf81TyDhaHLtXt6sEywdfpv1cRUMeFFy7DuypH2U0WUL0GTdyAQvXegviT4PJK4KuMmOaIDpICseQ==}
@@ -27226,8 +27371,8 @@ snapshots:
 
   '@jridgewell/source-map@0.3.5':
     dependencies:
-      '@jridgewell/gen-mapping': 0.3.3
-      '@jridgewell/trace-mapping': 0.3.20
+      '@jridgewell/gen-mapping': 0.3.5
+      '@jridgewell/trace-mapping': 0.3.25
 
   '@jridgewell/sourcemap-codec@1.4.15': {}
 
@@ -28153,7 +28298,7 @@ snapshots:
     dependencies:
       detect-libc: 1.0.3
       is-glob: 4.0.3
-      micromatch: 4.0.5
+      micromatch: 4.0.7
       node-addon-api: 7.0.0
     optionalDependencies:
       '@parcel/watcher-android-arm64': 2.3.0
@@ -30574,7 +30719,7 @@ snapshots:
       dequal: 2.0.3
       lodash: 4.17.21
       memoizerific: 1.11.3
-      semver: 7.6.2
+      semver: 7.5.4
       store2: 2.14.2
       telejson: 7.2.0
       ts-dedent: 2.2.0
@@ -31784,7 +31929,7 @@ snapshots:
       graphemer: 1.4.0
       ignore: 5.3.0
       natural-compare-lite: 1.4.0
-      semver: 7.6.2
+      semver: 7.5.4
       tsutils: 3.21.0(typescript@4.9.5)
     optionalDependencies:
       typescript: 4.9.5
@@ -33987,6 +34132,8 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  compute-scroll-into-view@3.1.0: {}
+
   computeds@0.0.1: {}
 
   concat-map@0.0.1: {}
@@ -34376,7 +34523,7 @@ snapshots:
       postcss-modules-scope: 3.0.0(postcss@8.4.38)
       postcss-modules-values: 4.0.0(postcss@8.4.38)
       postcss-value-parser: 4.2.0
-      semver: 7.5.4
+      semver: 7.6.2
       webpack: 5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.2))(esbuild@0.18.20)
 
   css-loader@6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.2))(esbuild@0.19.11)):
@@ -35038,6 +35185,15 @@ snapshots:
   dotenv@8.6.0: {}
 
   downloadjs@1.4.7: {}
+
+  downshift@9.0.8(react@18.3.1):
+    dependencies:
+      '@babel/runtime': 7.24.7
+      compute-scroll-into-view: 3.1.0
+      prop-types: 15.8.1
+      react: 18.3.1
+      react-is: 18.2.0
+      tslib: 2.6.2
 
   dragula@3.7.3:
     dependencies:
@@ -36479,13 +36635,13 @@ snapshots:
 
   find-yarn-workspace-root@2.0.0:
     dependencies:
-      micromatch: 4.0.5
+      micromatch: 4.0.7
 
   findup-sync@4.0.0:
     dependencies:
       detect-file: 1.0.0
       is-glob: 4.0.3
-      micromatch: 4.0.5
+      micromatch: 4.0.7
       resolve-dir: 1.0.1
 
   firacode@6.2.0: {}
@@ -37916,7 +38072,7 @@ snapshots:
       http-proxy: 1.18.1
       is-glob: 4.0.3
       is-plain-obj: 3.0.0
-      micromatch: 4.0.5
+      micromatch: 4.0.7
     optionalDependencies:
       '@types/express': 4.17.21
     transitivePeerDependencies:
@@ -39202,7 +39358,7 @@ snapshots:
       chalk: 4.1.2
       flow-parser: 0.223.3
       graceful-fs: 4.2.11
-      micromatch: 4.0.5
+      micromatch: 4.0.7
       neo-async: 2.6.2
       node-dir: 0.1.17
       recast: 0.21.5
@@ -47742,7 +47898,7 @@ snapshots:
   yargs@16.2.0:
     dependencies:
       cliui: 7.0.4
-      escalade: 3.1.1
+      escalade: 3.1.2
       get-caller-file: 2.0.5
       require-directory: 2.1.1
       string-width: 4.2.3
