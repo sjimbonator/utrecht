@@ -1587,6 +1587,9 @@ importers:
       '@utrecht/focus-ring-css':
         specifier: workspace:*
         version: link:../../components/focus-ring
+      '@utrecht/form-field-combobox-react':
+        specifier: workspace:*
+        version: link:packages/form-field-combobox-react
       '@utrecht/form-field-description-css':
         specifier: workspace:*
         version: link:../../components/form-field-description

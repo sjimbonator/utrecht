@@ -73,6 +73,8 @@ export type { FigureCaptionProps } from './FigureCaption';
 export { FigureCaption } from './FigureCaption';
 export type { FormFieldProps } from './FormField';
 export { FormField } from './FormField';
+export type { FormFieldComboboxProps } from './FormFieldCombobox';
+export { FormFieldCombobox } from './FormFieldCombobox';
 export type { FormFieldDescriptionProps } from './FormFieldDescription';
 export { FormFieldDescription } from './FormFieldDescription';
 export type { FormFieldErrorMessageProps } from './FormFieldErrorMessage';
