@@ -6,8 +6,15 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
+export type ParagraphAppearance = 'lead' | 'small';
+
+const appearanceValues: ParagraphAppearance[] = ['lead', 'small'];
+
+export const isParagraphAppearance = (arg: unknown): arg is ParagraphAppearance =>
+  typeof arg === 'string' && appearanceValues.includes(arg as never);
+
 export interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
-  appearance?: string | 'lead' | 'small';
+  appearance?: ParagraphAppearance;
   /**
    *
    * @deprecated Use `appearance="lead"` instead
