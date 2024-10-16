@@ -6,12 +6,16 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-export type ParagraphAppearance = 'lead' | 'small';
+const enumGuard =
+  <T,>(values: readonly T[]) =>
+  <T,>(x: unknown): x is T =>
+    values.includes(x as never);
 
-const appearanceValues: ParagraphAppearance[] = ['lead', 'small'];
+const APPEARANCE_VALUES = ['lead', 'small'] as const;
 
-export const isParagraphAppearance = (arg: unknown): arg is ParagraphAppearance =>
-  typeof arg === 'string' && appearanceValues.includes(arg as never);
+export type ParagraphAppearance = (typeof APPEARANCE_VALUES)[number];
+
+export const isParagraphAppearance = enumGuard(APPEARANCE_VALUES);
 
 export interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
   appearance?: ParagraphAppearance;
